@@ -9,8 +9,8 @@
     ·
     <a href="http://www.zhangruimao.site">Ruimao Zhang</a>
   </p>
-  <h3 align="center"><a href="">Paper</a> | <a href="">Project Page</a> | <a href="https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD">Dataset</a> </h3>
+  <h3 align="center"><a href="">Paper</a> | <a href="https://ziyeeee.github.io/stcgs.github.io/">Project Page</a> | <a href="https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD">Dataset</a> </h3>
   <div align="center"></div>
 </p>
-  <h3>Coding is coming soon.</h3>
+  <h3>Code is coming soon.</h3>
 </p>
