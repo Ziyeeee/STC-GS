@@ -1,6 +1,6 @@
 <h2 align="center">High-Dynamic Radar Sequence Prediction for<br>Weather Nowcasting Using Spatiotemporal Coherent Gaussian Representation</h2>
 <p align="center">
-    <a href="https://github.com/Ziyeeee">Ziye Wang</a>
+    <a href="https://ziyeeee.github.io/">Ziye Wang</a>
     ·
     <a href="https://github.com/IranQin">Yiran Qin</a>
     ·
@@ -8,7 +8,7 @@
     ·
     <a href="http://www.zhangruimao.site">Ruimao Zhang</a>
 </p>
-<h3 align="center"><a href="">Paper</a> | <a href="https://ziyeeee.github.io/stcgs.github.io/">Project Page</a> | <a href="https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD">Dataset</a> </h3>
+<h3 align="center"><a href="https://arxiv.org/abs/2502.14895">Paper</a> | <a href="https://ziyeeee.github.io/stcgs.github.io/">Project Page</a> | <a href="https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD">Dataset</a> </h3>
 <h3>Code is being gradually released.</h3>
 
 ## Installation
