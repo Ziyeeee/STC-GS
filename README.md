@@ -11,7 +11,7 @@
 <h3 align="center"><a href="">Paper</a> | <a href="https://ziyeeee.github.io/stcgs.github.io/">Project Page</a> | <a href="https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD">Dataset</a> </h3>
 <h3>Code is being gradually released.</h3>
 
-# Installation
+## Installation
 
 Our code relies on Python 3.10 and CUDA 12.4, but it should work with CUDA 11.8 as well.
 
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 pip install submodules/diff-gaussian-rasterization-radar
 ```
 
-# Datasets
+## Datasets
 
 Please refer to [3D-NEXRAD](https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD) for more details.
 
@@ -49,20 +49,20 @@ cat nexrad-[YYYY].tar.gz.* | tar -zxv - -C [your_dataset_dir]/
 python utils/preprocess.py --path [your_dataset_path]
 ```
 
-# Running
+## Running
 
-## Re-representation
+### Re-representation
 
 ```
 python mp_represent.py --num_processes [your_cpu_cnt] --hdf_path [your_dataset_path]
 ```
 
 
-## Prediction
+### Prediction
 
 
 
-# Citation
+## Citation
 
 ```
 @inproceedings{wang2025highdynamic,
