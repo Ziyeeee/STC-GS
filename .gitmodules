@@ -1,0 +1,3 @@
+[submodule "submodules/diff-gaussian-rasterization-radar"]
+	path = submodules/diff-gaussian-rasterization-radar
+	url = https://github.com/Ziyeeee/diff-gaussian-rasterization-radar.git
