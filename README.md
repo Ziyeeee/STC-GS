@@ -13,7 +13,7 @@
 
 ## Installation
 
-Our code relies on Python 3.10 and CUDA 12.4, but it should work with CUDA 11.8 as well.
+Our code relies on Python 3.10 and CUDA 12.4, but it should work with CUDA >= 11.8 as well.
 
 1. Clone STC-GS.
 ```
