@@ -40,7 +40,7 @@ Please refer to [3D-NEXRAD](https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD) f
 
 1. Extract from `tars.gz.*`.
 ```
-cat nexrad-[YYYY].tar.gz.* | tar -zxv - -C [your_dataset_dir]/
+cat nexrad-[YYYY].tar.gz.* | tar -zxv -C [your_dataset_dir]/
 ```
 
 2. Split the dataset.
@@ -56,7 +56,7 @@ python utils/preprocess.py --path [your_dataset_path]
 ```
 python mp_represent.py --num_processes [your_cpu_cnt] --hdf_path [your_dataset_path]
 ```
-
+A [mini_dataset](https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD/resolve/main/mini_dataset.tar.gz?download=true) is released for quickly running the code and understanding the data format. 
 
 ### Prediction
 
