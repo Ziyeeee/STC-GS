@@ -9,7 +9,6 @@
     <a href="http://www.zhangruimao.site">Ruimao Zhang</a>
 </p>
 <h3 align="center"><a href="https://arxiv.org/abs/2502.14895">Paper</a> | <a href="https://ziyeeee.github.io/stcgs.github.io/">Project Page</a> | <a href="https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD">Dataset</a> </h3>
-<h3>Code is being gradually released.</h3>
 
 ## Installation
 
@@ -36,31 +35,49 @@ pip install submodules/diff-gaussian-rasterization-radar
 
 ## Datasets
 
-Please refer to [3D-NEXRAD](https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD) for more details.
+For more details, please refer to the [3D-NEXRAD dataset](https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD).  
 
-1. Extract from `tars.gz.*`.
-```
-cat nexrad-[YYYY].tar.gz.* | tar -zxv -C [your_dataset_dir]/
-```
+## Dataset Extraction  
 
-2. Split the dataset.
+1. **Extract the dataset from split tar files**
+   ```bash
+   cat nexrad-[YYYY].tar.gz.* | tar -zxv -C [your_dataset_dir]/
+   ```  
 
-```
-python utils/preprocess.py --path [your_dataset_path]
-```
+2. **Preprocess and split the dataset**
+   ```bash
+   python utils/preprocess.py --path [your_dataset_path]
+   ```  
+   This will generate a `[your_dataset_name].json` file in the same directory.  
 
 ## Running
 
 ### Re-representation
 
-```
+To convert raw data into the Gaussian representation, run:  
+```bash
 python mp_represent.py --num_processes [your_cpu_cnt] --hdf_path [your_dataset_path]
-```
-A [mini_dataset](https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD/resolve/main/mini_dataset.tar.gz?download=true) is released for quickly running the code and understanding the data format. 
+```  
+The Gaussians and logs will be stored in a subdirectory within `[your_dataset_path]`.  
 
-### Prediction
+For quick testing and understanding of the data format, a [mini dataset](https://huggingface.co/datasets/Ziyeeee/3D-NEXRAD/resolve/main/mini_dataset.tar.gz?download=true) is available.  
 
+### Prediction  
 
+1. **Prepare Gaussian Sequences**  
+   ```bash
+   python utils/sort_stat.py --dataset_dir [your_gaussians_dir] --json_path [your_dataset_json_path]
+   ```  
+
+2. **Train the model**  
+   ```bash
+   python train.py --dataset_dir [your_gaussians_dir] --json_path [your_dataset_json_path]
+   ```  
+
+3. **Evaluate**
+   ```bash
+   python test.py --dataset_dir [your_gaussians_dir] --json_path [your_dataset_json_path] --hdf_path [your_origin_dataset_path] --ckpt_path [your_ckpt_path]
+   ```
 
 ## Citation
 

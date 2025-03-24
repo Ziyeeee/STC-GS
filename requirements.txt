@@ -1,0 +1,8 @@
+h5py
+plyfile
+scipy
+tensorboard
+lpips
+lightning
+causal-conv1d>=1.4.0
+mamba-ssm
